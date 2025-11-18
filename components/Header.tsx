@@ -1,58 +1,111 @@
+'use client';
+
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Header() {
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
     return (
-        <header className="bg-white shadow-md fixed w-full top-0 z-50">
-            <div className="container mx-auto px-4">
-                <div className="flex justify-between items-center py-4">
+        <header className="fixed w-full top-0 z-50 bg-white shadow-md">
+            <nav className="container mx-auto px-4 py-3 md:py-4">
+                <div className="flex items-center justify-between">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2">
-                        <div className="relative inline-flex items-center justify-center w-24 h-24 border-4 border-white rounded-full bg-black">
-                            <div className="relative">
-                                <span className="text-3xl font-bold text-yellow-500">un</span>
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <svg className="w-full h-full" viewBox="0 0 100 100">
-                                        <line x1="20" y1="20" x2="80" y2="80" stroke="white" strokeWidth="6"/>
-                                        <line x1="80" y1="20" x2="20" y2="80" stroke="white" strokeWidth="6"/>
-                                    </svg>
-                                </div>
-                            </div>
+                    <Link href="/" className="flex items-center">
+                        <div className="text-2xl md:text-3xl font-bold">
+                            <span className="line-through decoration-2 md:decoration-4 text-gray-400">un</span>
+                            <span className="text-yellow-500">satisfied</span>
                         </div>
-                        <span className="text-5xl font-bold text-yellow-500">satisfied</span>
                     </Link>
 
-                    {/* Navigation */}
-                    <nav>
-                        <ul className="flex space-x-8 text-lg">
-                            <li>
-                                <Link href="/" className="text-gray-700 hover:text-blue-600 transition">
-                                    Home
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/about" className="text-gray-700 hover:text-blue-600 transition">
-                                    About
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/events" className="text-gray-700 hover:text-blue-600 transition">
-                                    Events
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/sermons" className="text-gray-700 hover:text-blue-600 transition">
-                                    Sermons
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition">
-                                    Contact
-                                </Link>
-                            </li>
-                        </ul>
-                    </nav>
+                    {/* Desktop Navigation */}
+                    <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+                        <Link href="/" className="text-gray-700 hover:text-blue-600 font-semibold transition text-sm lg:text-base">
+                            Home
+                        </Link>
+                        <Link href="/about" className="text-gray-700 hover:text-blue-600 font-semibold transition text-sm lg:text-base">
+                            About
+                        </Link>
+                        <Link href="/events" className="text-gray-700 hover:text-blue-600 font-semibold transition text-sm lg:text-base">
+                            Events
+                        </Link>
+                        <Link href="/sermons" className="text-gray-700 hover:text-blue-600 font-semibold transition text-sm lg:text-base">
+                            Sermons
+                        </Link>
+                        <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-semibold transition text-sm lg:text-base">
+                            Contact
+                        </Link>
+                        <Link href="/contact" className="bg-blue-600 text-white px-4 lg:px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition text-sm lg:text-base">
+                            Join Us
+                        </Link>
+                    </div>
+
+                    {/* Mobile Menu Button */}
+                    <button
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        className="md:hidden text-gray-700 focus:outline-none p-2"
+                        aria-label="Toggle menu"
+                    >
+                        {mobileMenuOpen ? (
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        ) : (
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        )}
+                    </button>
                 </div>
-            </div>
+
+                {/* Mobile Navigation */}
+                {mobileMenuOpen && (
+                    <div className="md:hidden mt-4 pb-4 space-y-3 border-t border-gray-200 pt-4">
+                        <Link
+                            href="/"
+                            className="block text-gray-700 hover:text-blue-600 font-semibold transition py-2 px-2 rounded hover:bg-gray-50"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            Home
+                        </Link>
+                        <Link
+                            href="/about"
+                            className="block text-gray-700 hover:text-blue-600 font-semibold transition py-2 px-2 rounded hover:bg-gray-50"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            About
+                        </Link>
+                        <Link
+                            href="/events"
+                            className="block text-gray-700 hover:text-blue-600 font-semibold transition py-2 px-2 rounded hover:bg-gray-50"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            Events
+                        </Link>
+                        <Link
+                            href="/sermons"
+                            className="block text-gray-700 hover:text-blue-600 font-semibold transition py-2 px-2 rounded hover:bg-gray-50"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            Sermons
+                        </Link>
+                        <Link
+                            href="/contact"
+                            className="block text-gray-700 hover:text-blue-600 font-semibold transition py-2 px-2 rounded hover:bg-gray-50"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            Contact
+                        </Link>
+                        <Link
+                            href="/contact"
+                            className="block bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition text-center mt-2"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            Join Us
+                        </Link>
+                    </div>
+                )}
+            </nav>
         </header>
     );
 }
