@@ -138,7 +138,7 @@ export default function Contact() {
                                 <div>
                                     <label className="block text-gray-700 font-semibold mb-2">Message *</label>
                                     <textarea
-                                        rows="5"
+                                        rows={5}
                                         placeholder="Tell us what's on your mind..."
                                         className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none resize-none"
                                         required
