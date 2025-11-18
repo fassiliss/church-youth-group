@@ -5,8 +5,14 @@ export default function Footer() {
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     {/* About Section */}
                     <div>
-                        <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">
-                            <span className="line-through">Un</span>satisfied
+                        <h3>
+    <span className="relative inline-block text-gray-400">
+        un
+        <span className="absolute inset-0 flex items-center justify-center text-red-500 font-black" style={{ fontSize: '1.4em' }}>
+            ×
+        </span>
+    </span>
+                            <span className="text-yellow-500">satisfied</span>
                         </h3>
                         <p className="text-sm md:text-base text-gray-400">
                             Building faith, creating community, and making a difference together.

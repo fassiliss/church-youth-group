@@ -13,7 +13,12 @@ export default function Header() {
                     {/* Logo */}
                     <Link href="/" className="flex items-center">
                         <div className="text-2xl md:text-3xl font-bold">
-                            <span className="line-through decoration-2 md:decoration-4 text-gray-400">un</span>
+    <span className="relative inline-block text-gray-400">
+        un
+        <span className="absolute inset-0 flex items-center justify-center text-red-500 font-black" style={{ fontSize: '1.4em' }}>
+            ×
+        </span>
+    </span>
                             <span className="text-yellow-500">satisfied</span>
                         </div>
                     </Link>
