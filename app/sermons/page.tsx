@@ -8,7 +8,7 @@ export default function Sermons() {
 
             {/* Hero Section */}
             <section className="relative h-[50vh] flex items-center justify-center pt-20">
-                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url(/images/patterns/sermons-hero.png)" }}></div>
+                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url(/images/patterns/unsatisfied6.jpeg)" }}></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/80 to-purple-900/80"></div>
                 <div className="relative z-10 text-center text-white px-4">
                     <h1 className="text-6xl md:text-7xl font-bold mb-6">Sermons & Messages</h1>

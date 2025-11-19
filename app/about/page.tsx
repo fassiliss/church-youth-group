@@ -9,7 +9,7 @@ export default function About() {
 
             {/* Hero Section */}
             <section className="relative min-h-[50vh] md:h-[60vh] flex items-center justify-center pt-20 px-4">
-                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url(/images/patterns/about-hero.png)" }}></div>
+                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url(/images/patterns/satisfied4.png)" }}></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-purple-900/80"></div>
                 <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6">About <span className="line-through decoration-2 md:decoration-4">Un</span>satisfied</h1>
