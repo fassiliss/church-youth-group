@@ -220,11 +220,16 @@ export default function About() {
                     <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                         {/* Leader 1 */}
                         <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                            <div className="h-64 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
-                                <div className="text-white text-7xl">👤</div>
+                            <div className="relative h-64 bg-gray-200 overflow-hidden">
+                                <Image
+                                    src="/images/leader1.jpeg"
+                                    alt="Pastor Name"
+                                    fill
+                                    className="object-cover"
+                                />
                             </div>
                             <div className="p-6">
-                                <h3 className="text-2xl font-bold mb-2">Pastor Name</h3>
+                                <h3 className="text-2xl font-bold mb-2">Saron Fassil</h3>
                                 <p className="text-blue-600 font-semibold mb-3"><span className="line-through">Un</span>satisfied Pastor</p>
                                 <p className="text-gray-600">Leading our <span className="line-through">Un</span>satisfied ministry with passion and dedication, helping young people discover their faith and purpose.</p>
                             </div>

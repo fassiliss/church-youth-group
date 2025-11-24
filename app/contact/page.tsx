@@ -9,7 +9,7 @@ export default function Contact() {
             {/* Hero Section */}
             <section className="relative min-h-[40vh] md:h-[50vh] flex items-center justify-center pt-20 px-4">
                 <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url(/images/patterns/sarisfied3.png)" }}></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-green-900/80"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/80 to-purple-900/80"></div>
                 <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6">Get in Touch</h1>
                     <p className="text-base sm:text-lg md:text-xl lg:text-2xl">We'd love to hear from you! Reach out with questions, prayer requests, or just to say hello</p>
@@ -29,7 +29,7 @@ export default function Contact() {
                             </div>
                             <h3 className="text-lg md:text-xl font-bold mb-2">Visit Us</h3>
                             <p className="text-sm md:text-base text-gray-600 mb-2">Tsega Church</p>
-                            <p className="text-xs md:text-sm text-gray-600">123 Church Street<br/>La Vergne, TN 37086</p>
+                            <p className="text-xs md:text-sm text-gray-600">5227 Murfreesboro Road<br/>La Vergne, TN 37086</p>
                             <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 font-semibold text-xs md:text-sm mt-2 inline-block">Get Directions →</a>
                         </div>
 
@@ -238,7 +238,7 @@ export default function Contact() {
                                 <div className="text-center">
                                     <div className="text-8xl mb-4">🗺️</div>
                                     <p className="text-2xl font-bold text-gray-700 mb-2">Google Maps Integration</p>
-                                    <p className="text-gray-600 mb-4">123 Church Street, La Vergne, TN 37086</p>
+                                    <p className="text-gray-600 mb-4">5227 Murfreesboro Road, La Vergne, TN 37086</p>
                                     <a
                                         href="https://www.google.com/maps/search/Tsega+Church+La+Vergne+TN"
                                         target="_blank"
